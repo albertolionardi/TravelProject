@@ -1,0 +1,7 @@
+node_modules/
+.idea/
+Lib/
+Scripts/
+TravelProject/__pycache__/
+pyvenv.cfg
+home/__pycache__/
