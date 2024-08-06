@@ -1,5 +1,5 @@
 
-.app2 {
+.app {
   font-family: 'Arial', sans-serif;
   text-align: center;
 }
@@ -33,9 +33,6 @@
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
-  background: url('../img/mountain.jpg') ;
-  background-size: cover;
-  color: #333;
   text-align: center;
 }
   .app {
@@ -43,11 +40,6 @@ body {
     padding: 20px;
   }
   
-  .header {
-    background: url('../img/mountain.jpg');
-     color: #fff;
-    padding: 60px 20px;
-  }
   
   .header h1 {
     margin: 0;
