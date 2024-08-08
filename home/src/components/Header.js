@@ -1,21 +1,21 @@
 import React from 'react';
 import { Button, Select, MenuItem, FormControl, InputLabel } from '@mui/material';
+import { Link } from 'react-router-dom';
 import '../../static/css/header.css';
-
 function Header() {
   return (
     <header className="header">
       <div>
         <nav>
         <div className="logo-container">
-        <img src="/static/img/logo.png" alt="Logo" className="logo" />
+        <img src="/media/logo.png" alt="Logo" className="logo" />
       </div>
       <div className="header-nav">
         <nav>
-          <a href="#">Explore</a>
-          <a href="#">Rate Us</a>
-          <a href="#">Contact Us</a>
-        </nav>
+              <Link to="/">Explore</Link>
+              <Link to="/rateus">Rate Us</Link>
+              <Link to="/contactus">Contact Us</Link>
+          </nav>
       </div>
       <div className="header-right">
         <FormControl variant="outlined" className="language-select">

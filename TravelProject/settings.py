@@ -40,6 +40,11 @@ INSTALLED_APPS = [
     'profileapp.apps.ProfileappConfig',
     'registration.apps.RegistrationConfig',
     'home.apps.HomeConfig',
+    'booking.apps.BookingConfig',
+    'activity.apps.ActivityConfig',
+    'description.apps.DescriptionConfig',
+    'api.apps.ApiConfig',
+    'rateus.apps.RateusConfig'
 ]
 
 MIDDLEWARE = [
@@ -128,3 +133,5 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'TravelProject' / 'media'

@@ -5,11 +5,11 @@ const NavigationBar = () => {
         <header className="header">
             <nav className="nav-container">
                 <ul className="nav-tabs">
-                    <li className="nav-tab"><a href="#">Search all</a></li>
-                    <li className="nav-tab"><a href="#">Hiking</a></li>
-                    <li className="nav-tab"><a href="#">Camping</a></li>
-                    <li className="nav-tab"><a href="#">Surfing</a></li>
-                    <li className="nav-tab"><a href="#">Snorkeling</a></li>
+                <a> <li className="nav-tab">Search all</li></a>
+                <a>    <li className="nav-tab">Hiking</li></a>
+                <a>  <li className="nav-tab">Camping</li></a>
+                <a>   <li className="nav-tab">Surfing</li></a>
+                <a>  <li className="nav-tab">Snorkeling</li></a>
 
                 </ul>
             </nav>
