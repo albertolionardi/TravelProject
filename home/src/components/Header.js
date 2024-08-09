@@ -2,7 +2,13 @@ import React from 'react';
 import { Button, Select, MenuItem, FormControl, InputLabel } from '@mui/material';
 import { Link } from 'react-router-dom';
 import '../../static/css/header.css';
+import { useNavigate } from "react-router-dom"
+
 function Header() {
+  const navigate = useNavigate();
+  const gotToNewPage=()=>{
+    location.href = "/account/login";
+  }
   return (
     <header className="header">
       <div>
@@ -25,7 +31,7 @@ function Header() {
             <MenuItem value="ID">ID</MenuItem>
           </Select>
         </FormControl>
-        <Button variant="contained" color="primary" className="login-button">
+        <Button variant="contained" color="primary" className="login-button" onClick={gotToNewPage}>
           Login
         </Button>
       </div>
