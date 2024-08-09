@@ -9,7 +9,7 @@ i18n
   .init({
     resources: {
       en: { translation: enTranslations },
-      es: { translation: idTranslations }
+      id: { translation: idTranslations }
     },
     lng: "en", // default language
     fallbackLng: "en",

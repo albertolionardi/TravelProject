@@ -7,12 +7,13 @@ import { useNavigate } from "react-router-dom"
 
 function Header() {
   const { i18n } = useTranslation();
-
   const handleLanguageChange = () => {
     const currentLang = i18n.language;
     const newLang = currentLang === 'en' ? 'id' : 'en';
     i18n.changeLanguage(newLang)
+    console.log(`Language changed to: ${newLang}`); // Debug log
   }
+  const isChecked = i18n.language === 'en';
   const handleRateUsClick = () => {
     window.location.href = '/rateus';
   };
@@ -27,12 +28,13 @@ function Header() {
     location.href = "/account/login";
   }
   return (
+    
     <header className="header">
         <nav className = "header__mainNav">
         <div className="header__logo">
         <img src="/media/logo.png" alt="Logo" className="header__logo" />
       </div>
-      <div className="header__links">
+      <div className="header__links"> 
         <nav>
           <a onClick = {() => handleExploreClick() } className='header__link' >Explore</a>
           <a onClick={() => handleRateUsClick()} className='header__link'>Rate Us </a>
@@ -41,8 +43,14 @@ function Header() {
       </div>
       <div className="header-right">
       <div className="switch">
-	    <input  onChange={handleLanguageChange} id="language-toggle" className="check-toggle check-toggle-round-flat" type="checkbox"/>
-	    <label htmlFor="language-toggle"></label>
+      <input
+              checked={isChecked}
+              onChange={handleLanguageChange}
+              id="language-toggle"
+              className="check-toggle check-toggle-round-flat"
+              type="checkbox"
+            />	    
+      <label htmlFor="language-toggle"></label>
 	    <span className="on">ID</span>
 	    <span className="off">EN</span>
   	</div>
