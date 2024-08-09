@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import NavigationBar from '../../../home/src/components/NavigationBar';
+import Header from '../../../home/src/components/Header';
+
 
 const RateUs = () => {
   const [rating, setRating] = useState(0);
@@ -26,6 +29,7 @@ const RateUs = () => {
   }
 
   return (
+    <>
     <div>
       <h1>Rate Us</h1>
       <form onSubmit={handleSubmit}>
@@ -51,6 +55,7 @@ const RateUs = () => {
         <button type="submit">Submit</button>
       </form>
     </div>
+    </>
   );
 };
 

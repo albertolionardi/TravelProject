@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import RecommendationList from './RecommendationList';
 import '../../static/css/recommendation.css';
+import NavigationBar from './NavigationBar';
 const Recommendation = () => {
     const [recommendations, setRecommendations] = useState({
         hiking: [],
@@ -29,7 +30,9 @@ const Recommendation = () => {
     }, []);
 
     return (
-        <div>
+        
+        <div>   
+            <NavigationBar/>
             <RecommendationList title="Recommended Hiking" recommendations={recommendations.hiking} />
             <RecommendationList title="Recommended Camping" recommendations={recommendations.camping} />
             <RecommendationList title="Recommended Surfing" recommendations={recommendations.surfing} />
