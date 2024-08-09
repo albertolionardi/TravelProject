@@ -1,19 +1,22 @@
-
-.header {
+.navbar {
     background-color: white;
     padding: 20px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: sticky; /* Make it stick to the top */
+    top: 0; /* Position it at the top */
+    z-index: 1000; /* Ensure it stays above other content */
+    width: 100%; /* Ensure it takes the full width */
+    border-bottom: 1px solid #ddd; /* Optional: Add a bottom border */
 }
-
-.nav-container {
+.navbar-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.nav-tabs {
+.navbar-tabs {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -21,12 +24,12 @@
     gap: 20px;
 }
 
-.nav-tab {
+.navbar-tab {
     margin: 0;
     padding: 0;
 }
 
-.nav-tab a {
+.navbar-tab a {
     text-decoration: none;
     color: black;
     font-weight: bold;
@@ -35,20 +38,22 @@
     transition: all 0.3s ease-in-out;
 }
 
-.nav-tab a:hover,
-.nav-tab a:focus {
+.navbar-tab a:hover,
+.navbar-tab a:focus {
     border-bottom: 2px solid black;
     color: #28a745; /* Optional: Change the color on hover */
+    cursor: pointer;
 }
 
-.search-container {
+.search-wrapper {
     margin-top: 20px;
     width: 100%;
     display: flex;
     justify-content: center;
+    position: sticky;
 }
 
-.search-bar {
+.search-input {
     width: 50%;
     padding: 10px;
     font-size: 16px;

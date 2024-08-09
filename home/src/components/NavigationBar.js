@@ -1,23 +1,22 @@
 import React from 'react';
 import '../../static/css/navbar.css';
+
 const NavigationBar = () => {
     return (
-        <header className="header">
-            <nav className="nav-container">
-                <ul className="nav-tabs">
-                <a> <li className="nav-tab">Search all</li></a>
-                <a>    <li className="nav-tab">Hiking</li></a>
-                <a>  <li className="nav-tab">Camping</li></a>
-                <a>   <li className="nav-tab">Surfing</li></a>
-                <a>  <li className="nav-tab">Snorkeling</li></a>
-
+        <div className="navbar">
+            <div className="navbar-container">
+                <ul className="navbar-tabs">
+                    <li className="navbar-tab"><a href="#">Search all</a></li>
+                    <li className="navbar-tab"><a href="#">Hiking</a></li>
+                    <li className="navbar-tab"><a href="#">Camping</a></li>
+                    <li className="navbar-tab"><a href="#">Surfing</a></li>
+                    <li className="navbar-tab"><a href="#">Snorkeling</a></li>
                 </ul>
-            </nav>
-            <div className="search-container">
-                <input type="text" className="search-bar" placeholder="Search..." />
             </div>
-        </header>
-
+            <div className="search-wrapper">
+                <input type="text" className="search-input" placeholder="Search..." />
+            </div>
+        </div>
     );
 }
 

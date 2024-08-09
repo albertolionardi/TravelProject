@@ -2,11 +2,15 @@ const path = require("path");
 const webpack = require("webpack");
 
 module.exports = {
-  mode: 'production', // This sets process.env.NODE_ENV to 'production'
-  entry: "./src/index.js",
+  mode: 'production',
+  entry: {
+    home: './home/src/index.js',
+    description: './description/src/index.js',
+    rateus: './rateus/src/index.js'
+  },
   output: {
     path: path.resolve(__dirname, "./static/frontend"),
-    filename: "main.js",
+    filename: "[name].js",
   },
   module: {
     rules: [
@@ -14,12 +18,12 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
         },
       },
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },
