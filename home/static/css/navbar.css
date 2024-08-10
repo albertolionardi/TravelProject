@@ -1,60 +1,120 @@
 .navbar {
     background-color: white;
-    padding: 20px 0;
+    padding: 10px 0; /* Reduced padding to make the navbar smaller */
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: sticky; /* Make it stick to the top */
-    top: 0; /* Position it at the top */
-    z-index: 1000; /* Ensure it stays above other content */
-    width: 100%; /* Ensure it takes the full width */
-    border-bottom: 1px solid #ddd; /* Optional: Add a bottom border */
-}
-.navbar-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: sticky;
+    top: 80px; /* Initially placed below the header */
+    z-index: 999;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    transition: top 0.3s ease, padding 0.3s ease;
 }
 
 .navbar-tabs {
-    list-style-type: none;
-    margin: 0;
+    list-style: none;
     padding: 0;
+    margin: 0;
     display: flex;
-    gap: 20px;
+    align-items: center; /* Align items vertically */
 }
 
 .navbar-tab {
-    margin: 0;
-    padding: 0;
+    margin: 0 8px; /* Reduced margin between tabs */
+}
+
+.icon-tab {
+    display: flex;
+    align-items: center;
+}
+
+.icon-link {
+    display: inline-block;
+    width: 80px; /* Reduced width for smaller icons */
+    height: 80px; /* Reduced height for smaller icons */
+    border-radius: 50%; /* Keeps the icon circular */
+    overflow: hidden; /* Ensures the image fits within the circle */
+}
+
+.icon-link img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease; /* Smooth scale transition */
+}
+
+.icon-link:hover img {
+    transform: scale(1.1); /* Slight zoom effect on hover */
 }
 
 .navbar-tab a {
     text-decoration: none;
-    color: black;
-    font-weight: bold;
-    padding: 10px 15px;
-    border-bottom: 2px solid transparent;
-    transition: all 0.3s ease-in-out;
+    color: inherit;
+    font-size: 12px; /* Smaller font size for text inside the navbar */
 }
 
-.navbar-tab a:hover,
-.navbar-tab a:focus {
-    border-bottom: 2px solid black;
-    color: #28a745; /* Optional: Change the color on hover */
-    cursor: pointer;
+.navbar-tab a:hover {
+    color: #007bff; /* Adjust color on hover as needed */
 }
 
 .search-wrapper {
-    margin-top: 20px;
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     position: sticky;
+    top: 140px; /* Adjust this to match the total height (header + navbar) */
+    z-index: 998;
+    background-color: #fff;
+    padding: 10px 20px; /* Padding around the search bar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 50px; /* Rounded corners */
+    width: 50%;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px 0 0 50px; /* Rounded left corners */
+    outline: none;
+    box-shadow: none; /* Remove default input field shadow */
+    flex-grow: 1; /* Allows the input to take up all available space */
+  }
+  
+  .search-button {
+    padding: 12px 20px;
+    background-color: #5cbf7f; /* Green background similar to the example */
+    color: white;
+    border: none;
+    border-radius: 0 50px 50px 0; /* Rounded right corners */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none;
+    outline: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-button:hover {
+    background-color: #4caf50; /* Darker green on hover */
+  }
+  
+  .search-button:active {
+    background-color: #45a049; /* Even darker green when pressed */
+  }
+
+.sticky-nav {
+    top: 0;
+    padding: 10px 0;
 }
 
-.search-input {
-    width: 50%;
-    padding: 10px;
-    font-size: 16px;
+.shrink-header {
+    height: 50px; /* Further reduced height for the sticky state */
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent */
 }

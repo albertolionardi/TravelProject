@@ -5,10 +5,12 @@ import Recommendation from './Recommendation';
 import Description from '../../../description/src/components/Description';
 import RateUs from '../../../rateus/src/components/Rateus';
 import { useTranslation } from 'react-i18next';
-import i18n from '../../../language/i18n';
+import Footer from './Footer';
+import '../../static/css/main.css';
 
 const App = () => {
   const {t} = useTranslation();
+
   return (
     
     <BrowserRouter>
@@ -23,6 +25,7 @@ const App = () => {
             <Route path ="/rateus" element ={<RateUs/>}/>
           </Routes>
         </main>
+        <Footer/>
       </div>
     </BrowserRouter>
   );

@@ -1,13 +1,22 @@
 import React, { useState } from 'react';
-import NavigationBar from '../../../home/src/components/NavigationBar';
-import Header from '../../../home/src/components/Header';
+import { Button, TextField, Typography, Box, Rating } from '@mui/material';
+import { styled } from '@mui/material/styles';
+import { Star, StarBorder } from '@mui/icons-material';
+import '../../static/css/rateus.css';
 
 
 const RateUs = () => {
   const [rating, setRating] = useState(0);
   const [feedback, setFeedback] = useState('');
   const [submitted, setSubmitted] = useState(false);
-
+  const StyledButton = styled(Button)({
+    marginTop: '20px',
+    backgroundColor: '#4CAF50',
+    color: 'white',
+    '&:hover': {
+      backgroundColor: '#45a049',
+    },
+  });
   const handleRatingChange = (event) => {
     setRating(event.target.value);
   };
@@ -29,33 +38,40 @@ const RateUs = () => {
   }
 
   return (
-    <>
-    <div>
-      <h1>Rate Us</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>
-            Rating:
-            <select value={rating} onChange={handleRatingChange}>
-              <option value="0">Select a rating</option>
-              <option value="1">1 - Very Poor</option>
-              <option value="2">2 - Poor</option>
-              <option value="3">3 - Average</option>
-              <option value="4">4 - Good</option>
-              <option value="5">5 - Excellent</option>
-            </select>
-          </label>
-        </div>
-        <div>
-          <label>
-            Feedback:
-            <textarea value={feedback} onChange={handleFeedbackChange} />
-          </label>
-        </div>
-        <button type="submit">Submit</button>
+    <Box className="rate-us-container">
+      <Typography className="rate-us-title">
+        Rate Us
+      </Typography>
+      <form className="rate-us-form" onSubmit={handleSubmit}>
+        <Box className="rate-us-rating">
+          <Rating
+            name="rating"
+            value={rating}
+            onChange={handleRatingChange}
+            icon={<Star fontSize="inherit" />}
+            emptyIcon={<StarBorder fontSize="inherit" />}
+          />
+        </Box>
+        <TextField
+          className="rate-us-feedback"
+          label="Your Feedback"
+          multiline
+          rows={4}
+          variant="outlined"
+          fullWidth
+          value={feedback}
+          onChange={handleFeedbackChange}
+        />
+        <Button
+          className="rate-us-submit-button"
+          type="submit"
+          variant="contained"
+          fullWidth
+        >
+          Submit
+        </Button>
       </form>
-    </div>
-    </>
+    </Box>
   );
 };
 
