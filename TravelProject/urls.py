@@ -28,6 +28,7 @@ urlpatterns = [
     path('description/', include('description.urls')), ## Redirect to Home
     path('api/', include('api.urls')),
     path('rateus/', include('rateus.urls')),
+    path('payment/', include('payment.urls')),
     re_path(r'^description/', TemplateView.as_view(template_name='home.html'), name='description_cactch'), ## Accessing Directly Through URL
 
 

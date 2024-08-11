@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-
+import environ
 from pathlib import Path
 import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'activity.apps.ActivityConfig',
     'description.apps.DescriptionConfig',
     'api.apps.ApiConfig',
-    'rateus.apps.RateusConfig'
+    'rateus.apps.RateusConfig',
+    'payment.apps.PaymentConfig'
 ]
 
 MIDDLEWARE = [
@@ -137,3 +138,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'TravelProject' / 'media'
+env = environ.Env()
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+
+MIDTRANS_SERVER_KEY = env('MIDTRANS_SERVER_KEY')

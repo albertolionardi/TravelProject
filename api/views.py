@@ -11,6 +11,7 @@ def activity_list(request):
             "description": activity.description,
             "activity": activity.name,
             "category" : activity.category,
+            "price" : activity.price
         }
         for activity in activities
     ]
@@ -23,7 +24,8 @@ def activity_detail(request, activity_name):
         data = {
             "title": activity.title,
             "image": activity.image.url,
-            "description": activity.description
+            "description": activity.description,
+            "price" : activity.price
         }
         return JsonResponse(data, safe=False)
     except Activity.DoesNotExist:
