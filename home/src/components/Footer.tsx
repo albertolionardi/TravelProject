@@ -16,7 +16,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-logo-partner">
-          <img src="/media/logo.jpg" alt="Company Logo" className="footer-logo" onClick={()=> handleExploreClick()}/>
+          <img src="/media/jelajahi_logo.png" alt="Company Logo" className="footer-logo" onClick={()=> handleExploreClick()}/>
           <div className="partner-section">
             <button className="partner-button">Partner with Us</button>
             <div className="payment-partners">

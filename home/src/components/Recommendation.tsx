@@ -2,13 +2,15 @@ import React, { useEffect, useState } from 'react';
 import RecommendationList from './RecommendationList';
 import '../../static/css/recommendation.css';
 import NavigationBar from './NavigationBar';
-import Slideshow from './Slideshow';
+import { useTranslation } from 'react-i18next';
+
 const Recommendation = () => {
     const [recommendations, setRecommendations] = useState({
         allActitivites : [],
         hiking: [],
         snorkeling: []
     });
+    const { t} = useTranslation();
     const images = [
         '/media/rinjani.jpg',
         '/media/batur.jpg',
@@ -43,24 +45,24 @@ const Recommendation = () => {
 
             {selectedCategory === 'hiking' && (
                 <RecommendationList 
-                    title={<span className="small-title">Explore Indonesia's mountains and uncover the beauty and adventure they hold</span>} 
+                    title={<span className="small-title">{t('hikingRecommendation')}</span>} 
                     recommendations={recommendations.hiking} 
                 />
             )}
             {selectedCategory === 'snorkeling' && (
                 <RecommendationList 
-                    title={<span className="small-title">Discover the vibrant underwater world of Indonesia through unforgettable snorkeling and diving adventures</span>} 
+                    title={<span className="small-title">{t('snorkelingRecommendation')}</span>} 
                     recommendations={recommendations.snorkeling} 
                 />
             )}
             {selectedCategory === 'all' && (
                 <>
                     <RecommendationList 
-                        title={<span className="small-title">Explore all the amazing hiking activities Indonesia has to offer</span>} 
+                        title={<span className="small-title">{t('hikingRecommendation')}</span>} 
                         recommendations={recommendations.hiking} 
                     />
                     <RecommendationList 
-                        title={<span className="small-title">Explore all the amazing snorkeling activities Indonesia has to offer</span>} 
+                        title={<span className="small-title">{t('snorkelingRecommendation')}</span>} 
                         recommendations={recommendations.snorkeling} 
                     />
                 </>

@@ -11,7 +11,15 @@
     border-bottom: 1px solid #ddd;
     transition: top 0.3s ease, padding 0.3s ease;
 }
-
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust opacity for more or less shadowing */
+    z-index: 999; /* Make sure it covers the background but stays under the dropdown */
+}
 .navbar-tabs {
     list-style: none;
     padding: 0;
@@ -71,6 +79,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     border-radius: 50px; /* Rounded corners */
     width: 50%;
+    z-index: 1000;
   }
   
   .search-input {
@@ -117,4 +126,33 @@
 .shrink-header {
     height: 50px; /* Further reduced height for the sticky state */
     background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent */
+}
+.suggestions-list {
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    z-index: 1001; /* Ensure the dropdown is above the overlay */
+    top: 60px; /* Adjust based on the height of your input */
+}
+
+.suggestions-list li {
+    display: flex;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestions-list li img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.suggestions-list li:hover {
+    background-color: #f0f0f0;
 }

@@ -30,6 +30,7 @@ urlpatterns = [
     path('rateus/', include('rateus.urls')),
     path('payment/', include('payment.urls')),
     re_path(r'^description/', TemplateView.as_view(template_name='home.html'), name='description_cactch'), ## Accessing Directly Through URL
+    re_path(r'^payment/', TemplateView.as_view(template_name='home.html'), name='payment_catch'), ## Accessing Directly Through URL
 
 
 

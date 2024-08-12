@@ -1,5 +1,5 @@
-import App from "./components/App"
-import Header from "./components/Header"
+import App from "./components/App.tsx"
+import Header from "./components/Header.tsx";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../language/i18n.js'; // Import i18n configuration

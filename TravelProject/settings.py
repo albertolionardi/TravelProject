@@ -45,9 +45,14 @@ INSTALLED_APPS = [
     'description.apps.DescriptionConfig',
     'api.apps.ApiConfig',
     'rateus.apps.RateusConfig',
-    'payment.apps.PaymentConfig'
+    'payment.apps.PaymentConfig',
+    'modeltranslation'
 ]
 
+LANGUAGES = (
+    ('en', 'English'),
+    ('id', 'Indonesian'),
+)
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

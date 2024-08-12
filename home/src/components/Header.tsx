@@ -9,7 +9,6 @@ function Header() {
     const currentLang = i18n.language;
     const newLang = currentLang === 'en' ? 'id' : 'en';
     i18n.changeLanguage(newLang)
-    console.log(`Language changed to: ${newLang}`); // Debug log
   }
   const isChecked = i18n.language === 'en';
   const handleExploreClick = () => {
@@ -22,12 +21,7 @@ function Header() {
     <header className="header">
       <nav className="header__mainNav">
         <div className="header__logo">
-          <img src="/media/logo.jpg" alt="Logo" className="header__logo" onClick={()=> handleExploreClick()}/>
-        </div>
-        <div className="header__links">
-          <nav>
-            <a onClick={() => handleExploreClick()} className="header__link">Explore</a>
-          </nav>
+          <img src="/media/jelajahi_logo.png" alt="Logo" className="header__logo" onClick={()=> handleExploreClick()}/>
         </div>
         <div className="header-right">
           <div className="header-right__container"> {/* New container for flexbox */}

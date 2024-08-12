@@ -1,5 +1,5 @@
 .footer {
-    background-color: #80AF81;
+    background-color: #654321;
     color: #ecf0f1;
     padding: 40px 20px;
   }
@@ -18,10 +18,6 @@
     text-align: center;
   }
   
-  .footer-logo {
-    width: 150px;
-    margin-bottom: 20px;
-  }
   
   .partner-section {
     margin-top: 20px;
@@ -101,8 +97,8 @@
     margin: 5px;
   }
   .footer-logo {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 75px;
     border-radius: 50%;
     object-fit: cover;
     transition: all 0.3s ease;
