@@ -59,7 +59,6 @@ INSTALLED_APPS = [
     'api.apps.ApiConfig',
     'rateus.apps.RateusConfig',
     'payment.apps.PaymentConfig',
-    'modeltranslation'
 ]
 
 LANGUAGES = (
@@ -164,4 +163,6 @@ MEDIA_ROOT = BASE_DIR / 'TravelProject' / 'media'
 env = environ.Env()
 environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
-MIDTRANS_SERVER_KEY = env('MIDTRANS_SERVER_KEY')
+MIDTRANS_SERVER_KEY = "SB-Mid-server-JDkaO0bvf8DdmepOcWBhXPHZ"
+
+USE_I18N = True

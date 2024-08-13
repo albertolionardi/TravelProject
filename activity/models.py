@@ -6,9 +6,13 @@ class Activity(models.Model):
     title = models.CharField(max_length=200)
     image = models.ImageField(upload_to='img/')
     description = models.TextField()
+    description_en = models.TextField()
+    description_id = models.TextField()
     category = models.CharField(max_length=100)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     long_description = models.TextField()
+    long_description_en = models.TextField()
+    long_description_id = models.TextField()
     latitude = models.FloatField()  
     longitude = models.FloatField() 
 

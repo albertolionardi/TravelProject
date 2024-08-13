@@ -13,9 +13,9 @@ def activity_list(request):
             "category" : activity.category,
             "price" : activity.price,
             "description_en" : activity.description_en,
-            "description_id" : activity.description_ind,
+            "description_id" : activity.description_id,
             "long_description_en" : activity.long_description_en,
-            "long_description_id" : activity.long_description_ind
+            "long_description_id" : activity.long_description_id
         }
         for activity in activities
     ]
@@ -31,9 +31,9 @@ def activity_detail(request, activity_name):
             "description": activity.description,
             "price" : activity.price,
             "description_en" : activity.description_en,
-            "description_id" : activity.description_ind,
+            "description_id" : activity.description_id,
             "long_description_en" : activity.long_description_en,
-            "long_description_id" : activity.long_description_ind,
+            "long_description_id" : activity.long_description_id,
             "latitude" : activity.latitude,
             "longitude" : activity.longitude,
         }
