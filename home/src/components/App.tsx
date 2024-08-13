@@ -9,7 +9,7 @@ import Footer from './Footer.tsx';
 import AboutUs from '../../../aboutus/src/components/AboutUs.tsx';
 import '../../static/css/main.css';
 import Payment from '../../../payment/src/components/Payment';
-
+const clientId = '918693617201-clhgeefbq8agc80o0hf92j2h1pepmco8.apps.googleusercontent.com';
 
 
 
