@@ -67,3 +67,15 @@ def search_activities(request):
     ]
     
     return JsonResponse(data, safe=False)
+
+def check_email(request):
+    email = request.GET.get('email', None)
+
+    if email is None:
+        return JsonResponse({'error': 'Email is required'}, status=400)
+
+    try:
+        user_exists = User.objects.filter(email=email).exists()
+        return JsonResponse({'exists': user_exists})
+    except Exception as e:
+        return JsonResponse({'error': str(e)}, status=500)

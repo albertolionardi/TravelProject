@@ -3,7 +3,12 @@ import RecommendationList from './RecommendationList';
 import '../../static/css/recommendation.css';
 import NavigationBar from './NavigationBar';
 import { useTranslation } from 'react-i18next';
-
+import { ImageSlider } from './ImageSlider.tsx';
+import img1 from "../../../TravelProject/media/scenery.jpg"
+import img2 from "../../../TravelProject/media/rinjani.jpg"
+import img3 from "../../../TravelProject/media/mountain.jpg"
+import img4 from "../../../TravelProject/media/gede.jpg"
+import img5 from "../../../TravelProject/media/bromo.jpg"
 const Recommendation = () => {
     const [recommendations, setRecommendations] = useState({
         allActitivites : [],
@@ -11,12 +16,14 @@ const Recommendation = () => {
         snorkeling: []
     });
     const { t} = useTranslation();
-    const images = [
-        '/media/rinjani.jpg',
-        '/media/batur.jpg',
-        '/media/bromo.jpg',
-        // Add more image URLs here
-      ];
+    const img = [
+        { url: img1, alt: "Img One" },
+        { url: img2, alt: "Img Two" },
+        { url: img3, alt: "Img Three" },
+        { url: img4, alt: "Img Four" },
+        { url: img5, alt: "Img Five" },
+      ]
+      
     const [selectedCategory, setSelectedCategory] = useState('all'); // Default to hiking
 
     useEffect(() => {
@@ -42,7 +49,9 @@ const Recommendation = () => {
     return (
         <div>
             <NavigationBar onCategorySelect={handleCategorySelect} />
-
+            <div className="image-slider-container">
+                <ImageSlider images={img} width="800px" height="400px" />
+            </div>
             {selectedCategory === 'hiking' && (
                 <RecommendationList 
                     title={<span className="small-title">{t('hikingRecommendation')}</span>} 

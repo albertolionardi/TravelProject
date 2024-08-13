@@ -44,3 +44,9 @@
     font-size: 14px;
     padding: 0 15px 15px;
 }
+.image-slider-container {
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+
+}
