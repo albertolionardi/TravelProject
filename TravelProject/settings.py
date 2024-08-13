@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'api.apps.ApiConfig',
     'rateus.apps.RateusConfig',
     'payment.apps.PaymentConfig',
+    'aboutus.apps.AboutusConfig',
 ]
 
 LANGUAGES = (

@@ -47,6 +47,7 @@
   
   .footer-column {
     min-width: 200px;
+    padding-top: 10px;
   }
   
   .footer-column h4 {

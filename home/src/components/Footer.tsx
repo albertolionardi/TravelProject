@@ -7,7 +7,7 @@ const Footer = () => {
         window.location.href = '/rateus';
       };
       const handleAboutUsClick = () => {
-        window.location.href ='/aboutUs'
+        window.location.href ='/aboutus'
       }
       const handleExploreClick = () => {
         window.location.href = '/';

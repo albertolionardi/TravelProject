@@ -6,6 +6,7 @@ import Description from '../../../description/src/components/Description';
 import RateUs from '../../../rateus/src/components/Rateus';
 import { useTranslation } from 'react-i18next';
 import Footer from './Footer.tsx';
+import AboutUs from '../../../aboutus/src/components/AboutUs.tsx';
 import '../../static/css/main.css';
 import Payment from '../../../payment/src/components/Payment';
 
@@ -25,6 +26,7 @@ const App = () => {
             <Route path="/" element={<Recommendation />} />
             <Route path="/description/:activityName" element={<Description />} />
             <Route path ="/rateus" element ={<RateUs/>}/>
+            <Route path ="/aboutus" element ={<AboutUs/>}/>
             <Route path="/payment/:activityName" element={<Payment />} />
           </Routes>
         </main>

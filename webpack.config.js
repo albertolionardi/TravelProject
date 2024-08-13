@@ -10,7 +10,9 @@ module.exports = {
     home: './home/src/index.tsx',
     description: './description/src/index.tsx',
     rateus: './rateus/src/index.tsx',
-    payment: "./payment/src/index.tsx"
+    payment: "./payment/src/index.tsx",
+    aboutus: "./aboutus/src/index.tsx"
+
   },
   output: {
     path: path.resolve(__dirname, "./static/frontend"),
