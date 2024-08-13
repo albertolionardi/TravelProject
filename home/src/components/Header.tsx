@@ -1,7 +1,10 @@
 import React from 'react';
 import { Button, Select, MenuItem, FormControl, InputLabel } from '@mui/material';
+import { Link } from 'react-router-dom';
 import '../../static/css/header.css';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from "react-router-dom"
+import {GoogleLogin} from "@react-oauth/google";
 
 function Header() {
   const { i18n } = useTranslation();
@@ -41,6 +44,14 @@ function Header() {
               <Button variant="contained" color="primary" className="login-button" onClick={() => loginRedirect()}>
                 Login
               </Button>
+              <GoogleLogin
+                onSuccess={credentialResponse => {
+                    console.log(credentialResponse);
+                }}
+                onError={() => {
+                    console.log('Login Failed');
+                }}
+              />
             </div>
           </div>
         </div>
