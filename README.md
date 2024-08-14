@@ -5,6 +5,10 @@ Welcome to **Indonesia Hiking Explorer**, a fun and collaborative project dedica
 # PREVIEW
 ![Alt text](TravelProject/media/ss1.png)
 
+![Alt text](TravelProject/media/ss2.png)
+
+![Alt text](TravelProject/media/ss3.png)
+
 
 
 
