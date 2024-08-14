@@ -1,0 +1,210 @@
+.header {
+
+  height: 80px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left : 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  background-color: #A99A86;
+  transition: height 0.3s ease, background-color 0.3s ease;
+  text-transform: uppercase;
+  z-index: 999;
+}
+
+.header::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.3;
+}
+.header-right__container {
+  display: flex;
+  flex-direction: row; /* Align items side by side */
+  align-items: center; /* Center items vertically */
+  gap: 10px; /* Add some space between the elements */
+}
+
+.switch {
+  /* Ensure that the switch container maintains its size */
+  display: flex;
+  align-items: center;
+}
+
+
+/* Styles for the main navigation */
+.header__mainNav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding : 0 40px;
+}
+
+.header__logo {
+  width: 120px;
+  height: 75px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+  vertical-align: middle;
+  position: sticky;
+  top: 10px; /* Adjust this value to control the distance from the top */
+  z-index: 1000; /* Ensure it's above other elements */
+}
+.header__logo:hover{
+  cursor: pointer;
+}
+/* Styles for the links container */
+.header__links {
+  display: flex;
+}
+
+/* Styles for each link */
+.header__link {
+  margin: 0 10px;
+  padding: 5px 20px;
+  text-decoration: none;
+  color: black;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  vertical-align: middle;
+  position : sticky;
+  
+}
+.rounded_logo {
+  width: 50px; /* Adjust the size as needed */
+  height: 50px; /* Make sure height and width are equal to make the image round */
+  border-radius: 50%; /* This makes the image round */
+  object-fit: cover; /* Ensures the image scales to fit the round shape */
+}
+.header__link:hover {
+  border-color: black;
+  background-color: rgb(184, 178, 178);
+  cursor: pointer;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.switch > span {
+  position: absolute;
+  top: 10px; /* Adjusted for smaller height */
+  pointer-events: none;
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 10px; /* Smaller font size */
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+  width: 50%;
+  text-align: center;
+}
+
+input.check-toggle-round-flat:checked ~ .off {
+  color: #1A5319;
+}
+
+input.check-toggle-round-flat:checked ~ .on {
+  color: #fff;
+}
+
+.switch > span.on {
+  left: 0;
+  padding-left: 1px; /* Reduced padding */
+  color: #1A5319;
+}
+
+.switch > span.off {
+  right: 0;
+  padding-right: 2px; /* Reduced padding */
+  color: #fff;
+}
+
+.check-toggle {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+
+.check-toggle + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+
+input.check-toggle-round-flat + label {
+  padding: 1px; /* Reduced padding */
+  width: 80px; /* Smaller width */
+  height: 28px; /* Smaller height */
+  background-color: #1A5319;
+  border-radius: 50px; /* Adjusted for smaller size */
+}
+
+input.check-toggle-round-flat + label:before,
+input.check-toggle-round-flat + label:after {
+  display: block;
+  position: absolute;
+  content: "";
+}
+
+input.check-toggle-round-flat + label:before {
+  top: 1px; /* Adjusted for smaller size */
+  left: 1px;
+  bottom: 1px;
+  right: 1px;
+  background-color: #1A5319;
+  border-radius: 50px; /* Adjusted for smaller size */
+}
+
+input.check-toggle-round-flat + label:after {
+  top: 2px; /* Adjusted for smaller size */
+  left: 2px;
+  bottom: 2px;
+  width: 34px; /* Smaller width */
+  background-color: #fff;
+  border-radius: 45px; /* Adjusted for smaller size */
+  transition: margin 0.2s;
+}
+
+input.check-toggle-round-flat:checked + label:after {
+  margin-left: 40px; /* Adjusted to fit new smaller size */
+}
+
+.loginButton {
+  display: inline-block; 
+}
+
+.login-button {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  padding: 10px 20px; /* Padding inside the button */
+  font-size: 14px; /* Font size */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 1000; /* Ensure the button is on top */
+  pointer-events: auto; /* Ensure the button can be clicked */
+}
+
+.login-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+  transform: scale(1.05); /* Slight zoom on hover */
+  cursor: pointer;
+}
+
+.login-button:active {
+  background-color: #3e8e41; /* Even darker green when pressed */
+  transform: scale(0.95); /* Slight shrink when pressed */
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiking Indonesia</title>
+    {% load static %}
+    {% load i18n %}
+    <!-- Load the CSS bundle -->
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+</head>
+<body>
+    <script>
+        window.CSRF_TOKEN = '{{ csrf_token }}';
+    </script>
+    <!-- Root element where React will mount -->
+    <div id="app"></div>
+    <!-- Load the JS bundle -->
+    <script src="{% static 'frontend/home.js' %}"></script></body>
+</html>

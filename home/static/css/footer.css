@@ -1,0 +1,118 @@
+.footer {
+    background-color: #654321;
+    color: #ecf0f1;
+    padding: 40px 20px;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-logo-partner {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+  }
+  
+  
+  .partner-section {
+    margin-top: 20px;
+  }
+  
+  .partner-button {
+    background-color: #34495e;
+    color: #ecf0f1;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .payment-partners img {
+    width: 60px;
+    margin: 5px;
+  }
+  
+  .footer-links {
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .footer-column {
+    min-width: 200px;
+    padding-top: 10px;
+  }
+  
+  .footer-column h4 {
+    margin-bottom: 20px;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-column ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-column ul li a:hover {
+    color: #3498db;
+  }
+  
+  .footer-social {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+  }
+  
+  .footer-social h4 {
+    margin-bottom: 20px;
+  }
+  
+  .social-icons a img {
+    width: 30px;
+    margin: 0 10px;
+  }
+  
+  .app-download h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .app-download a img {
+    width: 120px;
+    margin: 5px;
+  }
+  .footer-logo {
+    width: 120px;
+    height: 75px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+    vertical-align: middle;
+    position: sticky;
+    top: 10px; /* Adjust this value to control the distance from the top */
+    z-index: 1000; /* Ensure it's above other elements */
+
+  }
+  .footer-logo:hover{
+    cursor:pointer;
+  }
+  .footer-links:hover {
+    border-color: black;
+    cursor: pointer;
+  }
