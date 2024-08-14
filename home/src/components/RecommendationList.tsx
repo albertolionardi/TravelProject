@@ -10,7 +10,6 @@ const RecommendationList = ({ title, recommendations }) => {
     const [lang, setLang] = useState(i18n.language);
 
     useEffect(() => {
-        // Update the state when the language changes
         setLang(i18n.language);
     }, [i18n.language]);
 
@@ -23,7 +22,7 @@ const RecommendationList = ({ title, recommendations }) => {
             <h2>{title}</h2>
             <div className="recommendation-container">
                 {recommendations.map((place, index) => {
-                    const descriptionField = `description_${lang}`; // This should be 'description_en' or 'description_ind'
+                    const descriptionField = `description_${lang}`; 
 
 
                     return (
@@ -36,7 +35,7 @@ const RecommendationList = ({ title, recommendations }) => {
                             <img src={place.image} alt={place.title} className="recommendation-image" />
                             <h3 className="recommendation-title">{place.title}</h3>
                             <p className="recommendation-description">
-                                {place[descriptionField] || place.description_en} {/* Fallback to English if necessary */}
+                                {place[descriptionField] || place.description_en}
                             </p>                    
                         </div>
                     );

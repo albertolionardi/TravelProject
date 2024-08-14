@@ -10,7 +10,7 @@ const Description = () => {
     const navigate = useNavigate();
     const { i18n } = useTranslation();
     const currentLang = i18n.language;
-    const apiKey = 'AIzaSyDixNWYc-E_pTS5Vj9M_w-oE5EHXARls88'; // Replace with your API key
+    const apiKey = process.env.REACT_APP_API_KEY;
 
     const handleBooking = (activityName, price) => {
         navigate(`/payment/${activityName}`, { state: { price } });

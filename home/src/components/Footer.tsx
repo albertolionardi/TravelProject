@@ -25,7 +25,7 @@ const Footer = () => {
         </div>
         <div className="footer-links">
           <div className="footer-column">
-            <h4>About Us</h4>
+            <h4>About Jelajahi</h4>
             <ul>
               <li><a href="#">How to Book</a></li>
               <li><a href="#">Contact Us</a></li>

@@ -42,14 +42,14 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(png|jpe?g|gif|svg)$/i, // Handles image files
+        test: /\.(png|jpe?g|gif|svg)$/i, 
         use: [
           {
             loader: 'file-loader',
             options: {
               name: '[name].[contenthash].[ext]',
               outputPath: 'images/',
-              publicPath: 'static/frontend/images/', // Adjust according to your output structure
+              publicPath: 'static/frontend/images/', 
             },
           },
         ],

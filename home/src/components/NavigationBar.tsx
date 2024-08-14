@@ -27,7 +27,7 @@ const NavigationBar = ({ onCategorySelect }) => {
 
     const handleSuggestionClick = (suggestion) => {
         navigate(`/description/${suggestion.name}`);
-        setIsSearching(false);  // Hide overlay and suggestions on selection
+        setIsSearching(false);  
     };
 
     const handleOverlayClick = () => {
@@ -39,7 +39,7 @@ const NavigationBar = ({ onCategorySelect }) => {
     };
 
     const handleBlur = () => {
-        setTimeout(() => setIsSearching(false), 200); // Delay to allow clicking on suggestions
+        setTimeout(() => setIsSearching(false), 200); 
     };
 
     return (

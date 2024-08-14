@@ -60,6 +60,7 @@ INSTALLED_APPS = [
     'rateus.apps.RateusConfig',
     'payment.apps.PaymentConfig',
     'aboutus.apps.AboutusConfig',
+    'channels'
 ]
 
 LANGUAGES = (
@@ -104,7 +105,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'TravelProject.wsgi.application'
-
+ASGI_APPLICATION = 'TravelProject.asgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
@@ -117,6 +118,14 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': '5432',
     }
+}
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6379)],
+        },
+    },
 }
 
 # Password validation
@@ -164,6 +173,5 @@ MEDIA_ROOT = BASE_DIR / 'TravelProject' / 'media'
 env = environ.Env()
 environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
-MIDTRANS_SERVER_KEY = "SB-Mid-server-JDkaO0bvf8DdmepOcWBhXPHZ"
 
 USE_I18N = True
