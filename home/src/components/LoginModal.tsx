@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import {Modal, Box, Typography, TextField, Button, IconButton } from '@mui/material';
-import { GoogleLogin } from '@react-oauth/google';
+import {GoogleLogin, useGoogleLogin, googleLogout} from '@react-oauth/google';
 import CloseIcon from '@mui/icons-material/Close';
+import axios from 'axios';
 
 const LoginModal = ({ open, handleClose }) => {
     const [email, setEmail] = useState('');
